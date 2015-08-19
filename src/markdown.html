@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>SPSSINC TRANSLATE OUTPUT Extension Command</title>
+
+<link rel="stylesheet" type="text/css" href="extsyntax.css" />
+
+
+
+
+
+</head>
+
+<body>
+<h1>SPSSINC TRANSLATE OUTPUT Extension Command</h1>
+
+<p>Translate the contents of the designated Viewer for the object types supported.</p>
+<div class="syntax">
+<p>SPSSINC TRANSLATE OUTPUT FOLDER=&ldquo;<em>folder</em>&rdquo;<br/>
+SUBTYPE=<em>subtypes</em><br/>
+PROCESS=PRECEDING<sup>&#42;&#42;</sup> or ALL<br/>
+SELECTEDONLY=NO<sup>&#42;&#42;</sup> or YES</p>
+
+<p>/HELP</p>
+
+<p><sup>&#42;</sup> Required<br/>
+<sup>&#42;&#42;</sup> Default</p>
+</div>
+<p>/HELP displays this text and does nothing else.</p>
+
+
+<pre class="example"><code>SPSSINC TRANSLATE OUTPUT FOLDER=&quot;C:/translationfiles&quot; SUBTYPE=&quot;Custom Table&quot;.
+
+SPSSINC TRANSLATE OUTPUT SELECTEDONLY=YES.
+</code></pre>
+
+<p><strong>FOLDER</strong> if specified, defines the folder where the translation definition files are located.
+Otherwise the files are expected to be found based on the SPSS_TRANSLATOR 
+environment variable or in the extensions subdirectory of the installation folder.</p>
+
+<p><strong>SELECTEDONLY</strong> = YES causes only the selected items in the Viewer to be translated.</p>
+
+<p><strong>SUBTYPE</strong> can specify a list of OMS table subtypes.  If given, only tables of those types
+will be translated.  This is ignored if SELECTEDONLY is YES.</p>
+
+<p><strong>PROCESS</strong> specifies whether to process only the immediately preceding procedure output
+or the entire Viewer contents.  This is ignored if SELECTEDONLY is YES.</p>
+
+<p>&copy; Copyright IBM Corp. 1989, 2014</p>
+
+</body>
+
+</html>
+
