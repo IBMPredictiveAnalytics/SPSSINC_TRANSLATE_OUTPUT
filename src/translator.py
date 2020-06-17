@@ -3,7 +3,7 @@
 # *
 # * IBM SPSS Products: Statistics Common
 # *
-# * (C) Copyright IBM Corp. 1989, 2013
+# * (C) Copyright IBM Corp. 1989, 2020
 # *
 # * US Government Users Restricted Rights - Use, duplication or disclosure
 # * restricted by GSA ADP Schedule Contract with IBM Corp. 
@@ -58,7 +58,7 @@ author = "SPSS, JKP"
 # 26-Aug-2010 support for table footnote translation
 
 
-import ConfigParser, codecs, re, inspect, os.path
+import configparser, codecs, re, inspect, os.path
 from os import getenv
 import SpssClient
 
@@ -170,7 +170,7 @@ class Translator(object):
     
         if self.tc is None:
             # load the translations
-            self.tc = ConfigParser.SafeConfigParser()
+            self.tc = configparser.SafeConfigParser()
             self.tc.optionxform = lambda x: x   # translation keys are case sensitive
         if itemtype == SpssClient.OutputItemType.PIVOT:
             subtype = item.GetSubType()

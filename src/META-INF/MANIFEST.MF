@@ -1,12 +1,15 @@
 Name: SPSSINC TRANSLATE OUTPUT
 Command-Specs: SPSSINC_TRANSLATE_OUTPUT.xml
-Code-Files: translator.py,SPSSINC_TRANSLATE_OUTPUT.py
-Misc-Files: translator.pdf,markdown.html,extsyntax.css,IBMdialogicon.png
+Code-Files: translator.PY,SPSSINC_TRANSLATE_OUTPUT.PY
+Misc-Files: extsyntax.css,IBMdialogicon.png,translator.pdf,markdown.ht
+ ml
 Summary: Framework for translating Viewer output
 Description: This package provides a mechanism for translating Viewer 
  output based on a set of supplementary files containing translations.
    See the included file translator.doc for instructions.
 Author: JKP, IBM SPSS
-Version: 1.0.2
-Product-Version: 18
+Version: 2.0.2
+Product-Version: 24
+Product-Version-Maximum: 99
 Plugins: Python
+Python-Version: 3

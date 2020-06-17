@@ -1,11 +1,11 @@
 # Construct a dataset listing the variables and selected properties for a collection of data files
-from __future__ import with_statement
+
 #/***********************************************************************
 # * Licensed Materials - Property of IBM 
 # *
 # * IBM SPSS Products: Statistics Common
 # *
-# * (C) Copyright IBM Corp. 1989, 2014
+# * (C) Copyright IBM Corp. 1989, 2020
 # *
 # * US Government Users Restricted Rights - Use, duplication or disclosure
 # * restricted by GSA ADP Schedule Contract with IBM Corp. 
@@ -30,7 +30,7 @@ def Run(args):
     
     
     ###print args   #debug
-    args = args[args.keys()[0]]
+    args = args[list(args.keys())[0]]
     
     helptext=r"""SPSSINC TRANSLATE OUTPUT [FOLDER=folder-specification]
     [SUBTYPE=list of subtypes]  
@@ -68,7 +68,7 @@ def Run(args):
     Template("HELP", subc="", ktype="bool")])
     
     # A HELP subcommand overrides all else
-    if args.has_key("HELP"):
+    if "HELP" in args:
         #print helptext
         helper()
     else:
@@ -88,7 +88,7 @@ def helper():
     # webbrowser.open seems not to work well
     browser = webbrowser.get()
     if not browser.open_new(helpspec):
-        print("Help file not found:" + helpspec)
+        print(("Help file not found:" + helpspec))
 try:    #override
     from extension import helper
 except:
