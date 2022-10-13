@@ -1,4 +1,5 @@
 Name: SPSSINC TRANSLATE OUTPUT
+Display-Name: Translate Output
 Command-Specs: SPSSINC_TRANSLATE_OUTPUT.xml
 Code-Files: translator.PY,SPSSINC_TRANSLATE_OUTPUT.PY
 Misc-Files: extsyntax.css,IBMdialogicon.png,translator.pdf,markdown.ht
